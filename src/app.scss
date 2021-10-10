@@ -71,10 +71,38 @@
         margin-right: 20px;
         display: flex;
         align-items: flex-end;
-        background-color: var(--light-orange);
-        background-image: url("./images/icon-work.svg");
         background-repeat: no-repeat;
         background-position: top right;
+
+        &.work {
+          background-image: url("./images/icon-work.svg");
+          background-color: var(--light-orange);
+        }
+
+        &.play {
+          background-image: url("./images/icon-play.svg");
+          background-color: var(--soft-blue);
+        }
+
+        &.study {
+          background-image: url("./images/icon-study.svg");
+          background-color: var(--light-red);
+        }
+
+        &.exercise {
+          background-image: url("./images/icon-exercise.svg");
+          background-color: var(--lime-green);
+        }
+
+        &.social {
+          background-image: url("./images/icon-social.svg");
+          background-color: var(--violet);
+        }
+
+        &.selfCare {
+          background-image: url("./images/icon-self-care.svg");
+          background-color: var(--soft-yellow);
+        }
 
         .textContent {
           background-color: var(--dark-blue);
@@ -93,6 +121,10 @@
             width: 80%;
             margin-top: 30px;
             font-size: 24px;
+
+            span {
+              color: inherit;
+            }
           }
 
           h1 {
@@ -105,6 +137,7 @@
           span {
             width: 80%;
             margin-bottom: 30px;
+            color: var(--pale-blue);
           }
 
         }
