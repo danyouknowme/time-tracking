@@ -44,10 +44,54 @@
         flex: 2;
         background-color: var(--blue);
         border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .image {
+          background-image: url("./images/image-jeremy.png");
+          background-size: cover;
+          width: 85px;
+          height: 85px;
+          border: 2px solid white;
+          border-radius: 50%;
+          margin: 0 0 50px 40px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          margin: 0 0 30px 40px;
+
+          span {
+            font-size: 20px;
+            color: var(--pale-blue);
+          }
+
+          h1 {
+            width: 60%;
+            font-size: 40px;
+            color: #fff;
+            font-weight: 300;
+            margin-top: 10px;
+          }
+        }
       }
 
       .period {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 50px;
+        
+        span {
+          margin: 15px 0;
+          color: var(--pale-blue);
+          opacity: 0.5;
+          cursor: pointer;
+        }
       }
     }
 

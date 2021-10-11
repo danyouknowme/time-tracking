@@ -26,8 +26,18 @@ const App = () => {
     <div className="app">
       <div className="wrapper">
         <div className="main">
-          <div className="profile"></div>  
-          <div className="period"></div>  
+          <div className="profile">
+            <div class="image"></div>
+            <div>
+              <span>Report for</span>
+              <h1>Jeremy Robson</h1>
+            </div>
+          </div>  
+          <div className="period">
+            <span>Daily</span>  
+            <span>Weekly</span>  
+            <span>Monthly</span>  
+          </div>  
         </div> 
         <div className="sub-main">
           {data.map((item) => (
