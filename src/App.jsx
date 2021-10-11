@@ -1,8 +1,16 @@
 import "./app.scss";
 import { MoreHorizOutlined } from "@material-ui/icons";
 import data from "./data.json";
+import { useState } from "react";
 
 const App = () => {
+
+  const [period, setPeriod] = useState("weekly");
+
+  const addPeriodClass = (time) => {
+    return (period === time ) ? "selected-choice" : "non-selected-choice";
+  }
+
   const checkClass = (title) => {
     switch (title) {
       case "Work":
@@ -34,9 +42,9 @@ const App = () => {
             </div>
           </div>  
           <div className="period">
-            <span>Daily</span>  
-            <span>Weekly</span>  
-            <span>Monthly</span>  
+            <span className={addPeriodClass("daily")} onClick={() => setPeriod("daily")}>Daily</span>  
+            <span className={addPeriodClass("weekly")} onClick={() => setPeriod("weekly")}>Weekly</span>  
+            <span className={addPeriodClass("monthly")} onClick={() => setPeriod("monthly")}>Monthly</span>  
           </div>  
         </div> 
         <div className="sub-main">
@@ -47,8 +55,8 @@ const App = () => {
                   <span>{item.title}</span>
                   <MoreHorizOutlined style={{ cursor: "pointer" }}/>
                 </div>
-                <h1>{item.timeframes.weekly.current}hrs</h1> 
-                <span>Last week - {item.timeframes.weekly.previous}hrs</span> 
+                <h1>{item.timeframes[period].current}hrs</h1> 
+                <span>Last week - {item.timeframes[period].previous}hrs</span> 
               </div>
             </div>
           ))}

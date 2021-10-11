@@ -88,9 +88,16 @@
         
         span {
           margin: 15px 0;
+          cursor: pointer;
+        }
+
+        .selected-choice {
+          color: white;
+        }
+
+        .non-selected-choice {
           color: var(--pale-blue);
           opacity: 0.5;
-          cursor: pointer;
         }
       }
     }
