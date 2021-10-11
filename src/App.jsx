@@ -55,8 +55,10 @@ const App = () => {
                   <span>{item.title}</span>
                   <MoreHorizOutlined style={{ cursor: "pointer" }}/>
                 </div>
-                <h1>{item.timeframes[period].current}hrs</h1> 
-                <span>Last week - {item.timeframes[period].previous}hrs</span> 
+                <div className="time">
+                  <h1>{item.timeframes[period].current}hrs</h1> 
+                  <span>Last week - {item.timeframes[period].previous}hrs</span> 
+                </div>
               </div>
             </div>
           ))}
